@@ -1,0 +1,11 @@
+framework module Mobtune {
+  umbrella header "Mobtune.h"
+
+  export *
+  module * { export * }
+}
+
+module Mobtune.Swift {
+    header "Mobtune-Swift.h"
+    requires objc
+}
