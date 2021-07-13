@@ -6,6 +6,7 @@ Pod::Spec.new do |spec|
 
   spec.description  = <<-DESC
 			MOBTUNE 사용을 위한 XCFramework입니다.
+			MOBTUNE 사용을 위해서는 APP_KEY를 발급 받으셔야 합니다.
                    DESC
 
   spec.homepage     = "https://github.com/mobon/MobtuneSDK_IOS"
@@ -14,7 +15,7 @@ Pod::Spec.new do |spec|
 
   spec.platform     = :ios, "13.0"
 
-  spec.source       = { :http => "https://github.com/mobon/MobtuneSDK_IOS/tree/main/Mobtune.xcframework"}
+  spec.source       = { :http => "https://github.com/mobon/MobtuneSDK_IOS/blob/main/Mobtune.xcframework_0.9.0.zip"}
  
   spec.license	   = { :type => "COMMERCIAL", :text => "Copyright (c) ENLIPLE" }
  
