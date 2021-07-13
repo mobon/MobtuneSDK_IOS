@@ -11,10 +11,10 @@ Pod::Spec.new do |spec|
 
   spec.author             = { "Enliple" => "dhkim4@enliple.com" }
 
-  # spec.platform     = :ios
+  spec.platform     = :ios
   # spec.platform     = :ios, "5.0"
 
-  spec.source       = { :http => "http://EXAMPLE/Mobtune_IOS.git"}
+  spec.source       = { :http => "https://github.com/mobon/MobtuneSDK_IOS/tree/main/Mobtune.xcframework"}
  
   spec.license	   = { :type => "COMMERCIAL", :text => Copyright (c)
  
