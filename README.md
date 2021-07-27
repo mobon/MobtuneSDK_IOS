@@ -16,7 +16,7 @@ Mobtune SDK 를 이용하여 통해 고객 흐름 파악 및 이용자 분석, �
 - podFile에 Mobtune을 추가 합니다.
 
 ```
-pod 'Mobtune'
+pod 'Mobtune_IOS'
 ```
 
 ## 2. Mobtune SDK 선언
