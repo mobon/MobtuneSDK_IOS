@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ChH3NksaZDuNb2IPpPP+vMGD/lo=
+		B97VMoxzTb6XbFMUX9gUWUhw4ok=
 		</data>
 		<key>Modules/Mobtune.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Modules/Mobtune.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		dI8+fSMqui/KDXWC3lmJe5v7TGs=
+		kPLRbyajsGEpfm9W0i0a1tThtRM=
 		</data>
 		<key>Modules/Mobtune.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/Mobtune.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		dI8+fSMqui/KDXWC3lmJe5v7TGs=
+		kPLRbyajsGEpfm9W0i0a1tThtRM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -79,7 +79,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nfs1mB4q56Esw2H+R9W3qnRtpobS2e+JjTECdbQx3bw=
+			vrAdx3FV2O90KNJ3EltdnvsX3vtjOvvWpbQxPhMtogE=
 			</data>
 		</dict>
 		<key>Modules/Mobtune.swiftmodule/arm64.swiftdoc</key>
@@ -100,7 +100,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nfs1mB4q56Esw2H+R9W3qnRtpobS2e+JjTECdbQx3bw=
+			vrAdx3FV2O90KNJ3EltdnvsX3vtjOvvWpbQxPhMtogE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
