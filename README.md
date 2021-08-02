@@ -2,7 +2,7 @@
 
 Mobtune SDK 를 이용하여 통해 고객 흐름 파악 및 이용자 분석, 측정 데이터 제공 합니다.
 
-# Mobtune Android SDK Release History
+# Mobtune iOS SDK Release History
  |version|Description|
 |---|:---:|
 |0.9.0|최초 라이브러리 버전|
