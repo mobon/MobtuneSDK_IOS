@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "Mobtune_IOS"
-  spec.version      = "0.9.9"
+  spec.version      = "0.9.10"
   spec.summary      = "MOBTUNE 사용을 위한 XCFramework입니다."
 
   spec.description  = <<-DESC
@@ -16,13 +16,12 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "13.0"
 
   spec.source       = { :git => "https://github.com/mobon/MobtuneSDK_IOS.git",
-                        :tag => "0.9.9"
+                        :tag => "0.9.10"
                       }
  
   spec.license	   = { :type => "COMMERCIAL", :text => "Copyright (c) ENLIPLE" }
  
-  #spec.preserve_paths = "Mobtune.xcframework"
-  spec.vendored_frameworks = "Mobtune.xcframework"
+  #spec.vendored_frameworks = "Mobtune.xcframework"
   spec.resources = "Mobtune.xcframework"
 
 end
