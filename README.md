@@ -6,6 +6,7 @@ Mobtune SDK 를 이용하여 통해 고객 흐름 파악 및 이용자 분석, �
  |version|Description|
 |---|:---:|
 |0.9.0|최초 라이브러리 버전|
+|0.9.13|Objective-C 프로젝트 대응|
 
 ## 개발환경
 - 최소 SDK Version : iOS13

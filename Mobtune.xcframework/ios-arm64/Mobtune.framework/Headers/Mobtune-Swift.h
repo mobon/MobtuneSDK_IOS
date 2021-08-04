@@ -189,7 +189,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
 @import ObjectiveC;
-@import UIKit;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -207,18 +206,17 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+@class NSString;
+@class WKWebViewConfiguration;
 
 SWIFT_CLASS("_TtC7Mobtune7Mobtune")
 @interface Mobtune : NSObject
++ (void)configureWithAppKey:(NSString * _Nonnull)appKey;
++ (WKWebViewConfiguration * _Nonnull)getConfiguration SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
-@class NSNumber;
-
-@interface UIViewController (SWIFT_EXTENSION(Mobtune))
-- (void)mobtune_viewWillAppear:(BOOL)animated;
-@end
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop

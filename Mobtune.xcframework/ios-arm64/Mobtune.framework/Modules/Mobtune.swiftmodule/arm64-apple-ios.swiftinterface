@@ -7,12 +7,9 @@ import Foundation
 import Swift
 import UIKit
 import WebKit
-@objc @_inheritsConvenienceInitializers public class Mobtune : ObjectiveC.NSObject {
-  public static func configure(appKey: Swift.String)
-  public static func getConfiguration() -> WebKit.WKWebViewConfiguration
+@_inheritsConvenienceInitializers @objc public class Mobtune : ObjectiveC.NSObject {
+  @objc public static func configure(appKey: Swift.String)
+  @objc public static func getConfiguration() -> WebKit.WKWebViewConfiguration
   @objc override dynamic public init()
   @objc deinit
-}
-extension UIViewController {
-  @objc dynamic public func mobtune_viewWillAppear(_ animated: Swift.Bool)
 }
