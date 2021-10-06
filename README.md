@@ -62,3 +62,29 @@ config.userContentController = contentController
 let webView = WKWebView(frame: view.bounds, configuration: config)
 view.addSubview(webView)
 ```
+
+
+## 5.사용자 이벤트
+ - 결제 이벤트
+  - 사용자의 결제 이벤트를 추적합니다.
+  - 아래 코드는 필수값들이니 빠진없이 채워주시기 바랍니다.
+  
+   ```swift
+import Mobtune
+
+let orderInfo = ProductInfo()
+orderInfo.totalPrice = "결제금액"
+orderInfo.paymentMethod = .결재 방법
+orderInfo.orderId = "결제 코드"
+orderInfo.productItems = []
+for _ in 0..<2 {
+    let item = ProductItem()
+    item.quantity = 수량
+    item.productName = "상품 이름"
+    item.productId = "상품 코드"
+    item.price = "상품 가격"
+    orderInfo.productItems.append(item)
+}
+
+Mobtune.addEvent(eventType: .ORDER, param: orderInfo)
+```
