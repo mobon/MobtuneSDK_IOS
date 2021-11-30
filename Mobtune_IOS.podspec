@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "Mobtune_IOS"
-  spec.version      = "0.9.16"
+  spec.version      = "0.9.17"
   spec.summary      = "MOBTUNE 사용을 위한 XCFramework입니다."
 
   spec.description  = <<-DESC
@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "11.0"
 
   spec.source       = { :git => "https://github.com/mobon/MobtuneSDK_IOS.git",
-                        :tag => "0.9.16"
+                        :tag => "0.9.17"
                       }
  
   spec.license	   = { :type => "COMMERCIAL", :text => "Copyright (c) ENLIPLE" }

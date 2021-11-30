@@ -10,11 +10,11 @@ import Swift
 import UIKit
 import WebKit
 import _Concurrency
-@_inheritsConvenienceInitializers @objc public class ProductInfo : EventParam {
+@_inheritsConvenienceInitializers @objc public class ProductInfo : Mobtune.EventParam {
   public var orderId: Swift.String!
-  public var productItems: [ProductItem]!
+  public var productItems: [Mobtune.ProductItem]!
   public var totalPrice: Swift.String!
-  public var paymentMethod: PaymentMethod!
+  public var paymentMethod: Mobtune.PaymentMethod!
   @objc override dynamic public init()
   @objc deinit
 }
@@ -38,7 +38,7 @@ import _Concurrency
   @objc public static func setDeepLink(linkUrl: Swift.String)
   @objc public static func getConfiguration() -> WebKit.WKWebViewConfiguration
   public static func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
-  public static func addEvent(eventType: MobtuneEvent, param: EventParam)
+  public static func addEvent(eventType: Mobtune.MobtuneEvent, param: Mobtune.EventParam)
   @objc override dynamic public init()
   @objc deinit
 }
@@ -58,9 +58,9 @@ import _Concurrency
   @objc override dynamic public init()
   @objc deinit
 }
-extension PaymentMethod : Swift.Equatable {}
-extension PaymentMethod : Swift.Hashable {}
-extension PaymentMethod : Swift.RawRepresentable {}
-extension MobtuneEvent : Swift.Equatable {}
-extension MobtuneEvent : Swift.Hashable {}
-extension MobtuneEvent : Swift.RawRepresentable {}
+extension Mobtune.PaymentMethod : Swift.Equatable {}
+extension Mobtune.PaymentMethod : Swift.Hashable {}
+extension Mobtune.PaymentMethod : Swift.RawRepresentable {}
+extension Mobtune.MobtuneEvent : Swift.Equatable {}
+extension Mobtune.MobtuneEvent : Swift.Hashable {}
+extension Mobtune.MobtuneEvent : Swift.RawRepresentable {}

@@ -1,15 +1,66 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-compiler-version: Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)
 // swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Mobtune
 import AdSupport
+import AppTrackingTransparency
 import Foundation
 @_exported import Mobtune
+import StoreKit
 import Swift
 import UIKit
 import WebKit
-@_inheritsConvenienceInitializers @objc public class Mobtune : ObjectiveC.NSObject {
-  @objc public static func configure(appKey: Swift.String)
-  @objc public static func getConfiguration() -> WebKit.WKWebViewConfiguration
+import _Concurrency
+@_inheritsConvenienceInitializers @objc public class ProductInfo : EventParam {
+  public var orderId: Swift.String!
+  public var productItems: [ProductItem]!
+  public var totalPrice: Swift.String!
+  public var paymentMethod: PaymentMethod!
   @objc override dynamic public init()
   @objc deinit
 }
+@_inheritsConvenienceInitializers @objc public class EventParam : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum PaymentMethod : Swift.Int {
+  case CREDICTCARD = 1
+  case BANKTRANSFER = 2
+  case MOBILEPAYMENT = 3
+  case ETC = 4
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc public class Mobtune : ObjectiveC.NSObject {
+  @objc public static func configure(appKey: Swift.String)
+  @objc public static func setDeepLink(linkUrl: Swift.String)
+  @objc public static func getConfiguration() -> WebKit.WKWebViewConfiguration
+  public static func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
+  public static func addEvent(eventType: MobtuneEvent, param: EventParam)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum MobtuneEvent : Swift.Int {
+  case ORDER
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc public class ProductItem : ObjectiveC.NSObject {
+  public var productId: Swift.String?
+  public var productName: Swift.String?
+  public var price: Swift.String?
+  public var quantity: Swift.Int?
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension PaymentMethod : Swift.Equatable {}
+extension PaymentMethod : Swift.Hashable {}
+extension PaymentMethod : Swift.RawRepresentable {}
+extension MobtuneEvent : Swift.Equatable {}
+extension MobtuneEvent : Swift.Hashable {}
+extension MobtuneEvent : Swift.RawRepresentable {}
