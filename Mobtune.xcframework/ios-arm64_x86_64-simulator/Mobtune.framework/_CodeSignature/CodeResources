@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/Mobtune-Swift.h</key>
 		<data>
-		DB2N1bPTpO77dkJ54N76TShKQLo=
+		9oaFguOZEKvipi36mGIdPPKxhVY=
 		</data>
 		<key>Headers/Mobtune.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		5BX7H7P0AkEpnO/ofT25kR/Vm2s=
+		GaDOWVblD3Wt/1/KqdJG6stZnec=
 		</data>
 		<key>Modules/Mobtune.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -22,11 +22,11 @@
 		</data>
 		<key>Modules/Mobtune.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		aSZM4Jl59NZiAURoRbB5hgzo5/s=
+		zJ5fWV9q7Duqux/oRca1Gq6tXtQ=
 		</data>
 		<key>Modules/Mobtune.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		IEIM1y0GiJ94QYQliiGVP7a8G58=
+		vEqM4ss6okW4OnjhzKUzwyzFMWM=
 		</data>
 		<key>Modules/Mobtune.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/Mobtune.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		aSZM4Jl59NZiAURoRbB5hgzo5/s=
+		zJ5fWV9q7Duqux/oRca1Gq6tXtQ=
 		</data>
 		<key>Modules/Mobtune.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		IEIM1y0GiJ94QYQliiGVP7a8G58=
+		vEqM4ss6okW4OnjhzKUzwyzFMWM=
 		</data>
 		<key>Modules/Mobtune.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -46,11 +46,11 @@
 		</data>
 		<key>Modules/Mobtune.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		bbLV2uMijiJClFhp/wVzM2ki3M0=
+		XlVz5ovlC0pKDEwPBgQ/JKBJqeU=
 		</data>
 		<key>Modules/Mobtune.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		aKK+GwwlI0nc8aa0B/LCwA5B/uM=
+		y3UIsP30AHfF1l0/9xFrNyXTpiM=
 		</data>
 		<key>Modules/Mobtune.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -58,11 +58,11 @@
 		</data>
 		<key>Modules/Mobtune.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		bbLV2uMijiJClFhp/wVzM2ki3M0=
+		XlVz5ovlC0pKDEwPBgQ/JKBJqeU=
 		</data>
 		<key>Modules/Mobtune.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		aKK+GwwlI0nc8aa0B/LCwA5B/uM=
+		y3UIsP30AHfF1l0/9xFrNyXTpiM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -75,7 +75,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			swxihGRR9Hl0EA2jFPksjD8AgDicFkqIt90XP8KnSLM=
+			I7r3n/XmEkAHQwy81IrFnuI4Gv/pU5dg3+sogdpjVHA=
 			</data>
 		</dict>
 		<key>Headers/Mobtune.h</key>
@@ -96,14 +96,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zyZgcCmtXzHy/atCQjusSas+YSdVzGeEFxAbxCL/32k=
+			4UDu8xlTz9tVuIuJk7ccoxokJFr0groCpjBXeaXaoVg=
 			</data>
 		</dict>
 		<key>Modules/Mobtune.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6fVBaXYCiYfEVvZCUxlhYew+kNqSQyvlGibWfE92fmI=
+			o9Xv95+XExCccHjNQjZcdIgpoCRZZWh4OdhFyLQSdSc=
 			</data>
 		</dict>
 		<key>Modules/Mobtune.swiftmodule/arm64.swiftdoc</key>
@@ -117,14 +117,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zyZgcCmtXzHy/atCQjusSas+YSdVzGeEFxAbxCL/32k=
+			4UDu8xlTz9tVuIuJk7ccoxokJFr0groCpjBXeaXaoVg=
 			</data>
 		</dict>
 		<key>Modules/Mobtune.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6fVBaXYCiYfEVvZCUxlhYew+kNqSQyvlGibWfE92fmI=
+			o9Xv95+XExCccHjNQjZcdIgpoCRZZWh4OdhFyLQSdSc=
 			</data>
 		</dict>
 		<key>Modules/Mobtune.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -138,14 +138,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VLFV2feb7oOI77kuJza5VUSx33E9tQAeDnaboffeNRc=
+			CSR2NF6cLA3hI4UMEnUhKbt18yOv2SM62s8gu889r7A=
 			</data>
 		</dict>
 		<key>Modules/Mobtune.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			n1EXrbEKVzI5MI+hVzfeTAT5utaDd3NoWV4ygKcqpeQ=
+			tNazSnNocVui2fOQMFhWmD+7d2MCJGHPeWNZgnkaBMU=
 			</data>
 		</dict>
 		<key>Modules/Mobtune.swiftmodule/x86_64.swiftdoc</key>
@@ -159,14 +159,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VLFV2feb7oOI77kuJza5VUSx33E9tQAeDnaboffeNRc=
+			CSR2NF6cLA3hI4UMEnUhKbt18yOv2SM62s8gu889r7A=
 			</data>
 		</dict>
 		<key>Modules/Mobtune.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			n1EXrbEKVzI5MI+hVzfeTAT5utaDd3NoWV4ygKcqpeQ=
+			tNazSnNocVui2fOQMFhWmD+7d2MCJGHPeWNZgnkaBMU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

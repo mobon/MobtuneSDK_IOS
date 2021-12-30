@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/Mobtune-Swift.h</key>
 		<data>
-		0woNyxKogFJ/yD3fW66+BV3IdFE=
+		wtQdtJCFj8QL6wleATdSkAh9meM=
 		</data>
 		<key>Headers/Mobtune.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		loBoIIzqBVXvm0ap5M2PV4gM3AU=
+		tj8CwDtrMWehgKfqsDYun+PUxoc=
 		</data>
 		<key>Modules/Mobtune.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -22,11 +22,11 @@
 		</data>
 		<key>Modules/Mobtune.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		5yf60AiUrgIt4xolsBoQcJ4VWSo=
+		ef8QoEaUUN6FdmsVfL3gepbt//U=
 		</data>
 		<key>Modules/Mobtune.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		qB27w3/RZlsjdquk1XuKq0xah6I=
+		p+BZuz2jnD6piL75PADEYOBJYTM=
 		</data>
 		<key>Modules/Mobtune.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/Mobtune.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		5yf60AiUrgIt4xolsBoQcJ4VWSo=
+		ef8QoEaUUN6FdmsVfL3gepbt//U=
 		</data>
 		<key>Modules/Mobtune.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		qB27w3/RZlsjdquk1XuKq0xah6I=
+		p+BZuz2jnD6piL75PADEYOBJYTM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -51,7 +51,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eBMoRDXFeTUrkzNd0NjCkxdsAlVuRrYP6Oe9T8JNlbg=
+			4YPL1fZMIfRnXFGYidstryEY8Y+1Hix79h921bqHD7I=
 			</data>
 		</dict>
 		<key>Headers/Mobtune.h</key>
@@ -72,14 +72,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ixvdVU7p9M/xke4bWZ6onAIxEGsJeJairxDfJRbzndA=
+			we6QmP+SKg5uuykDA1t8nBKst1fbIn1r+p6GcfSevwg=
 			</data>
 		</dict>
 		<key>Modules/Mobtune.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DNsvzrqhNwUTO7X2snA7TIgO1MODyNWA2UL8/yxAJ+Y=
+			HkNyyAqs+d6q5T9dvh9MyGBTzFgTKAbk2M3rtikoXyY=
 			</data>
 		</dict>
 		<key>Modules/Mobtune.swiftmodule/arm64.swiftdoc</key>
@@ -93,14 +93,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ixvdVU7p9M/xke4bWZ6onAIxEGsJeJairxDfJRbzndA=
+			we6QmP+SKg5uuykDA1t8nBKst1fbIn1r+p6GcfSevwg=
 			</data>
 		</dict>
 		<key>Modules/Mobtune.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DNsvzrqhNwUTO7X2snA7TIgO1MODyNWA2UL8/yxAJ+Y=
+			HkNyyAqs+d6q5T9dvh9MyGBTzFgTKAbk2M3rtikoXyY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

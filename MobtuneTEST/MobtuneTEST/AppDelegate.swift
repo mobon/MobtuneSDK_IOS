@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  MobtuneSample
+//  MobtuneTEST
 //
-//  Created by DoHyoung Kim on 2021/07/13.
+//  Created by DoHyoung Kim on 2021/12/20.
 //
 
 import UIKit
@@ -11,10 +11,11 @@ import Mobtune
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        Mobtune.configure(appKey: "Your_APP_KEY")
+        Mobtune.configure(appKey: "uv94xxw8mypkuv94xxw8my")
         
         return true
     }

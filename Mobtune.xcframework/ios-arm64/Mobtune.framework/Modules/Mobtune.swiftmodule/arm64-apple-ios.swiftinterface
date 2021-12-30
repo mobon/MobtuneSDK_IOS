@@ -16,6 +16,7 @@ import _Concurrency
   public var totalPrice: Swift.String!
   public var paymentMethod: PaymentMethod!
   @objc override dynamic public init()
+  @objc public init(orderID: Swift.String, items: [ProductItem], totalPrice: Swift.String, method: PaymentMethod)
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class EventParam : ObjectiveC.NSObject {
@@ -42,8 +43,30 @@ import _Concurrency
   @objc override dynamic public init()
   @objc deinit
 }
+@_inheritsConvenienceInitializers @objc public class OrderCancelData : EventParam {
+  public var orderID: Swift.String!
+  public var method: PaymentMethod?
+  public var toPrice: Swift.String?
+  public var products: [ProductItem]?
+  @objc override dynamic public init()
+  public init(orderID: Swift.String, method: PaymentMethod?, price: Swift.String?, products: [ProductItem]?)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class CartData : EventParam {
+  public var cartID: Swift.String?
+  public var products: [ProductItem]?
+  @objc override dynamic public init()
+  @objc public init(cartID: Swift.String?, products: [ProductItem])
+  @objc deinit
+}
 @objc public enum MobtuneEvent : Swift.Int {
   case ORDER
+  case SIGNIN
+  case SIGNUP
+  case ACCOUNTDELETED
+  case SHOPPINGCART
+  case ORDERCANCEL
+  case ACCOUNTMODIFIED
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -51,11 +74,32 @@ import _Concurrency
   }
 }
 @_inheritsConvenienceInitializers @objc public class ProductItem : ObjectiveC.NSObject {
-  public var productId: Swift.String?
-  public var productName: Swift.String?
+  public var productId: Swift.String!
+  public var productName: Swift.String!
   public var price: Swift.String?
-  public var quantity: Swift.Int?
+  public var quantity: Swift.String?
+  public var productOption: Swift.String?
   @objc override dynamic public init()
+  public init(productID: Swift.String, name: Swift.String, price: Swift.String?, quantity: Swift.String?, option: Swift.String?)
+  @objc deinit
+}
+@objc public class UserInfoData : UserAccountData {
+  public var nameInfo: Swift.String?
+  public var nicknameInfo: Swift.String?
+  public var genderInfo: Swift.String?
+  public var birthdayInfo: Swift.String?
+  public var phoneNo: Swift.String?
+  public var emailAddr: Swift.String?
+  public var addressInfo: Swift.String?
+  public var marryYn: Swift.String?
+  @objc override dynamic public init()
+  @objc public init(userID: Swift.String, userName: Swift.String?, nickName: Swift.String?, gender: Swift.String?, birth: Swift.String?, phoneNo: Swift.String?, email: Swift.String, address: Swift.String?, marry: Swift.String?)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class UserAccountData : EventParam {
+  public var userID: Swift.String!
+  @objc override dynamic public init()
+  @objc public init(userID: Swift.String)
   @objc deinit
 }
 extension PaymentMethod : Swift.Equatable {}

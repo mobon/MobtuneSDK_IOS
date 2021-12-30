@@ -65,10 +65,21 @@ view.addSubview(webView)
 
 
 ## 5.사용자 이벤트
- - 결제 이벤트
-  - 사용자의 결제 이벤트를 추적합니다.
-  - 아래 코드는 필수값들이니 빠진없이 채워주시기 바랍니다.
-  
+ - 이벤트 종류
+ 사용자, 결제관련 이벤트를 추적합니다.
+```
+ORDER, SHOPPINGCART, ORDERCANCEL, 
+SGININ, SIGNUP, ACCOUNTDELETED, ACCOUNTMODIFIED
+```
+
+### 5.1 결제 이벤트
+- 사용자의 결제 이벤트를 추적합니다.
+- 결제 방법 : 카드 - CREDICTCARD
+            계좌이체 - BANKTRANSFER
+            핸드폰 결제 - MOBILEPAYMENT
+            기타 - ETC
+            
+* 결제 추적  
    ```swift
 import Mobtune
 
@@ -87,4 +98,76 @@ for _ in 0..<2 {
 }
 
 Mobtune.addEvent(eventType: .ORDER, param: orderInfo)
+```
+
+*장바구니 담기
+```swift
+import Mobtune
+
+let cartData = CartData(cartID: "카트 아이디",
+                        products: [ProductItem])
+Mobtune.addEvent(eventType: .SHOPPINGCART, param: cartData)
+```
+
+*주문 취소
+```swift
+import Mobtune
+
+let cancelData = OrderCancelData(orderID: "주문 ID",
+                                 method: 결제 방법,
+                                 price: "주문 취소 금액",
+                                 products: [ProductItem])
+Mobtune.addEvent(eventType: .ORDERCANCEL, param: cancelData)
+```
+
+
+### 5.2 사용자 이벤트
+- 사용자의 로그인, 회원가입, 탈퇴등의 이벤트를 추적합니다.
+  
+*로그인 이벤트
+- 사용자의 로그인 이벤트 추적
+```swift
+import Mobtune
+
+let data = UserAccountData(userID: "사용자 ID")
+Mobtune.addEvent(eventType: .SIGNIN, param: data)
+```
+
+*회원 탈퇴 이벤트
+- 사용자의 회원 탈퇴 이벤트 추적
+```swift
+import Mobtune
+
+let data = UserAccountData(userID: "사용자 ID")
+Mobtune.addEvent(eventType: .ACCOUNTDELETED, param: data)
+```
+
+*회원 가입 / 수정 이벤트
+- 사용자의 회원 가입 / 수정 이벤트 추적
+- 성별 : 남성 - M
+        여성 - F
+        기타 - N
+- 생일 : 8자리 yyyyMMdd
+- 핸드폰번호 : 온리 숫자타입        
+- 결혼 여부 : Y/N        
+```swift
+import Mobtune
+
+let info = UserInfoData(userID: "사용자 ID",
+                        userName: "사용자 이름",
+                        nickName: "닉네임",
+                        gender: "F/M/N",
+                        birth: "yyyyMMdd",
+                        phoneNo: "01012345678",
+                        email: "사용자 이메일",
+                        address: "주소",
+                        marry: "Y/N")
+        
+if type == .join{
+    //회원가입
+    Mobtune.addEvent(eventType: .SIGNUP, param: info)
+}else if type == .modify {
+    //회원 정보 수정
+    Mobtune.addEvent(eventType: .ACCOUNTMODIFIED, param: info)
+}
 ```

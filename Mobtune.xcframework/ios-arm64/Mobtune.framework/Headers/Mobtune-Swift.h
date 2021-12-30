@@ -188,6 +188,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import Foundation;
 @import ObjectiveC;
 #endif
 
@@ -213,6 +214,15 @@ SWIFT_CLASS("_TtC7Mobtune10EventParam")
 @end
 
 @class NSString;
+@class ProductItem;
+
+SWIFT_CLASS("_TtC7Mobtune8CartData")
+@interface CartData : EventParam
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithCartID:(NSString * _Nullable)cartID products:(NSArray<ProductItem *> * _Nonnull)products OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 @class WKWebViewConfiguration;
 
 SWIFT_CLASS("_TtC7Mobtune7Mobtune")
@@ -225,7 +235,19 @@ SWIFT_CLASS("_TtC7Mobtune7Mobtune")
 
 typedef SWIFT_ENUM(NSInteger, MobtuneEvent, open) {
   MobtuneEventORDER = 0,
+  MobtuneEventSIGNIN = 1,
+  MobtuneEventSIGNUP = 2,
+  MobtuneEventACCOUNTDELETED = 3,
+  MobtuneEventSHOPPINGCART = 4,
+  MobtuneEventORDERCANCEL = 5,
+  MobtuneEventACCOUNTMODIFIED = 6,
 };
+
+
+SWIFT_CLASS("_TtC7Mobtune15OrderCancelData")
+@interface OrderCancelData : EventParam
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
 
 typedef SWIFT_ENUM(NSInteger, PaymentMethod, open) {
   PaymentMethodCREDICTCARD = 1,
@@ -238,6 +260,7 @@ typedef SWIFT_ENUM(NSInteger, PaymentMethod, open) {
 SWIFT_CLASS("_TtC7Mobtune11ProductInfo")
 @interface ProductInfo : EventParam
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithOrderID:(NSString * _Nonnull)orderID items:(NSArray<ProductItem *> * _Nonnull)items totalPrice:(NSString * _Nonnull)totalPrice method:(enum PaymentMethod)method OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -247,6 +270,21 @@ SWIFT_CLASS("_TtC7Mobtune11ProductItem")
 @end
 
 
+
+
+SWIFT_CLASS("_TtC7Mobtune15UserAccountData")
+@interface UserAccountData : EventParam
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithUserID:(NSString * _Nonnull)userID OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC7Mobtune12UserInfoData")
+@interface UserInfoData : UserAccountData
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithUserID:(NSString * _Nonnull)userID userName:(NSString * _Nullable)userName nickName:(NSString * _Nullable)nickName gender:(NSString * _Nullable)gender birth:(NSString * _Nullable)birth phoneNo:(NSString * _Nullable)phoneNo email:(NSString * _Nonnull)email address:(NSString * _Nullable)address marry:(NSString * _Nullable)marry OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithUserID:(NSString * _Nonnull)userID SWIFT_UNAVAILABLE;
+@end
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
