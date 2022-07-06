@@ -13,6 +13,9 @@ FOUNDATION_EXPORT double MobtuneVersionNumber;
 //! Project version string for Mobtune.
 FOUNDATION_EXPORT const unsigned char MobtuneVersionString[];
 
+
+extern const unsigned char * MobtuneVersionStringPtr;
+
 // In this header, you should import all the public headers of your framework using statements like #import <Mobtune/PublicHeader.h>
 
 

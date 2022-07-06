@@ -210,6 +210,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 
+/// 각 이벤트 객체의 기본형
 SWIFT_CLASS("_TtC7Mobtune10EventParam")
 @interface EventParam : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -218,23 +219,67 @@ SWIFT_CLASS("_TtC7Mobtune10EventParam")
 @class NSString;
 @class ProductItem;
 
+/// 장바구니 정보를 담는 객체
 SWIFT_CLASS("_TtC7Mobtune8CartData")
 @interface CartData : EventParam
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// 장바구니 객체 생성자
+/// \param cartID 장바구니 ID
+///
+/// \param products 장바구니에 담긴 상품 목록
+///
 - (nonnull instancetype)initWithCartID:(NSString * _Nullable)cartID products:(NSArray<ProductItem *> * _Nonnull)products OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
 @class WKWebViewConfiguration;
 
+/// Mobtune SDK 기본 관리 클래스.
 SWIFT_CLASS("_TtC7Mobtune7Mobtune")
 @interface Mobtune : NSObject
+/// SDK를 초기화 시켜 준다.
+/// \param appKey 발급받은 App Key
+///
 + (void)configureWithAppKey:(NSString * _Nonnull)appKey;
+/// DeepLink를 확인한다.  추적중인 DeepLink인 경우 관리자 페이지에서 통계를 확인할 수 있다.
+/// \param linkUrl 앱 진입에 사용된 DeepLink URL
+///
 + (void)setDeepLinkWithLinkUrl:(NSString * _Nonnull)linkUrl;
+/// 하이브리드 등 앱내에서 웹을 통해 화면 이동등의 추적이 필요한 경우 본 function을 통해 반환받은 WKWebViewConfiguration을 WKWebView에 설정하여 준다.
+///
+/// returns:
+/// 생성된 WKWebViewConfiguration 객체를 반환한다.
 + (WKWebViewConfiguration * _Nonnull)getConfiguration SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+/// 이벤트 타입값
+/// <ul>
+///   <li>
+///     ORDER : 결제
+///   </li>
+///   <li>
+///     SIGNIN : 로그인
+///   </li>
+///   <li>
+///     SIGNUP : 회원가입
+///   </li>
+///   <li>
+///     ACCOUNTDELETED : 회원 탈퇴
+///   </li>
+///   <li>
+///     SHOPPINGCART : 장바구니
+///   </li>
+///   <li>
+///     ORDERCANCEL : 결제취소
+///   </li>
+///   <li>
+///     ACCOUNTMODIFIED : 회원정보 수정
+///   </li>
+///   <li>
+///     PRODUCTVIEWED : 본상품
+///   </li>
+/// </ul>
 typedef SWIFT_ENUM(NSInteger, MobtuneEvent, open) {
   MobtuneEventORDER = 0,
   MobtuneEventSIGNIN = 1,
@@ -243,14 +288,31 @@ typedef SWIFT_ENUM(NSInteger, MobtuneEvent, open) {
   MobtuneEventSHOPPINGCART = 4,
   MobtuneEventORDERCANCEL = 5,
   MobtuneEventACCOUNTMODIFIED = 6,
+  MobtuneEventPRODUCTVIEWED = 7,
 };
 
 
+/// 결제 취소 정보를 담는 객체
 SWIFT_CLASS("_TtC7Mobtune15OrderCancelData")
 @interface OrderCancelData : EventParam
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+/// 결제 방법별 설정값
+/// <ul>
+///   <li>
+///     CREDICTCARD : 카드
+///   </li>
+///   <li>
+///     BANKTRANSFER : 계좌이체
+///   </li>
+///   <li>
+///     MOBILEPAYMENT : 모바일 결제
+///   </li>
+///   <li>
+///     ETC : 기타
+///   </li>
+/// </ul>
 typedef SWIFT_ENUM(NSInteger, PaymentMethod, open) {
   PaymentMethodCREDICTCARD = 1,
   PaymentMethodBANKTRANSFER = 2,
@@ -259,31 +321,74 @@ typedef SWIFT_ENUM(NSInteger, PaymentMethod, open) {
 };
 
 
+/// 결제한 상품 정보를 담는 객체
 SWIFT_CLASS("_TtC7Mobtune11ProductInfo")
 @interface ProductInfo : EventParam
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// 결제한 상품 객체 생성자
+/// \param orderID 주문번호
+///
+/// \param items 상품정보
+///
+/// \param totalPrice 결제 금액(합계)
+///
+/// \param method 결제 방법
+///
 - (nonnull instancetype)initWithOrderID:(NSString * _Nonnull)orderID items:(NSArray<ProductItem *> * _Nonnull)items totalPrice:(NSString * _Nonnull)totalPrice method:(enum PaymentMethod)method OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
+/// 상품 정보를 담는 객체
 SWIFT_CLASS("_TtC7Mobtune11ProductItem")
 @interface ProductItem : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
+/// 본 상품
+SWIFT_CLASS("_TtC7Mobtune15ProductViewItem")
+@interface ProductViewItem : EventParam
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
 
 
+
+
+/// 사용자 계정 정보를 담는 객체
 SWIFT_CLASS("_TtC7Mobtune15UserAccountData")
 @interface UserAccountData : EventParam
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// 계정 정보 객체 생성자
+/// \param userID 유져 ID
+///
 - (nonnull instancetype)initWithUserID:(NSString * _Nonnull)userID OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
+
+/// 사용자 정보를 담는 객체, UserAccountData를 상속 받는다.
 SWIFT_CLASS("_TtC7Mobtune12UserInfoData")
 @interface UserInfoData : UserAccountData
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// 사용자 정보를 담는 객체 생성자
+/// \param userID 사용자 ID
+///
+/// \param userName 이름
+///
+/// \param nickName 별명
+///
+/// \param gender 성별.  남성인 경우 ‘M’, 여성인 경우 ‘F’, 그 외의 경우 ‘N’
+///
+/// \param birth 생년월일
+///
+/// \param phoneNo 휴대전화 번호
+///
+/// \param email 이메일
+///
+/// \param address 주소
+///
+/// \param marry 결혼여부. 결혼한 경우 ‘Y’, 그 외의 경우 ‘N’
+///
 - (nonnull instancetype)initWithUserID:(NSString * _Nonnull)userID userName:(NSString * _Nullable)userName nickName:(NSString * _Nullable)nickName gender:(NSString * _Nullable)gender birth:(NSString * _Nullable)birth phoneNo:(NSString * _Nullable)phoneNo email:(NSString * _Nonnull)email address:(NSString * _Nullable)address marry:(NSString * _Nullable)marry OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithUserID:(NSString * _Nonnull)userID SWIFT_UNAVAILABLE;
 @end
@@ -505,6 +610,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 
+/// 각 이벤트 객체의 기본형
 SWIFT_CLASS("_TtC7Mobtune10EventParam")
 @interface EventParam : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -513,23 +619,67 @@ SWIFT_CLASS("_TtC7Mobtune10EventParam")
 @class NSString;
 @class ProductItem;
 
+/// 장바구니 정보를 담는 객체
 SWIFT_CLASS("_TtC7Mobtune8CartData")
 @interface CartData : EventParam
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// 장바구니 객체 생성자
+/// \param cartID 장바구니 ID
+///
+/// \param products 장바구니에 담긴 상품 목록
+///
 - (nonnull instancetype)initWithCartID:(NSString * _Nullable)cartID products:(NSArray<ProductItem *> * _Nonnull)products OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
 @class WKWebViewConfiguration;
 
+/// Mobtune SDK 기본 관리 클래스.
 SWIFT_CLASS("_TtC7Mobtune7Mobtune")
 @interface Mobtune : NSObject
+/// SDK를 초기화 시켜 준다.
+/// \param appKey 발급받은 App Key
+///
 + (void)configureWithAppKey:(NSString * _Nonnull)appKey;
+/// DeepLink를 확인한다.  추적중인 DeepLink인 경우 관리자 페이지에서 통계를 확인할 수 있다.
+/// \param linkUrl 앱 진입에 사용된 DeepLink URL
+///
 + (void)setDeepLinkWithLinkUrl:(NSString * _Nonnull)linkUrl;
+/// 하이브리드 등 앱내에서 웹을 통해 화면 이동등의 추적이 필요한 경우 본 function을 통해 반환받은 WKWebViewConfiguration을 WKWebView에 설정하여 준다.
+///
+/// returns:
+/// 생성된 WKWebViewConfiguration 객체를 반환한다.
 + (WKWebViewConfiguration * _Nonnull)getConfiguration SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+/// 이벤트 타입값
+/// <ul>
+///   <li>
+///     ORDER : 결제
+///   </li>
+///   <li>
+///     SIGNIN : 로그인
+///   </li>
+///   <li>
+///     SIGNUP : 회원가입
+///   </li>
+///   <li>
+///     ACCOUNTDELETED : 회원 탈퇴
+///   </li>
+///   <li>
+///     SHOPPINGCART : 장바구니
+///   </li>
+///   <li>
+///     ORDERCANCEL : 결제취소
+///   </li>
+///   <li>
+///     ACCOUNTMODIFIED : 회원정보 수정
+///   </li>
+///   <li>
+///     PRODUCTVIEWED : 본상품
+///   </li>
+/// </ul>
 typedef SWIFT_ENUM(NSInteger, MobtuneEvent, open) {
   MobtuneEventORDER = 0,
   MobtuneEventSIGNIN = 1,
@@ -538,14 +688,31 @@ typedef SWIFT_ENUM(NSInteger, MobtuneEvent, open) {
   MobtuneEventSHOPPINGCART = 4,
   MobtuneEventORDERCANCEL = 5,
   MobtuneEventACCOUNTMODIFIED = 6,
+  MobtuneEventPRODUCTVIEWED = 7,
 };
 
 
+/// 결제 취소 정보를 담는 객체
 SWIFT_CLASS("_TtC7Mobtune15OrderCancelData")
 @interface OrderCancelData : EventParam
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+/// 결제 방법별 설정값
+/// <ul>
+///   <li>
+///     CREDICTCARD : 카드
+///   </li>
+///   <li>
+///     BANKTRANSFER : 계좌이체
+///   </li>
+///   <li>
+///     MOBILEPAYMENT : 모바일 결제
+///   </li>
+///   <li>
+///     ETC : 기타
+///   </li>
+/// </ul>
 typedef SWIFT_ENUM(NSInteger, PaymentMethod, open) {
   PaymentMethodCREDICTCARD = 1,
   PaymentMethodBANKTRANSFER = 2,
@@ -554,31 +721,74 @@ typedef SWIFT_ENUM(NSInteger, PaymentMethod, open) {
 };
 
 
+/// 결제한 상품 정보를 담는 객체
 SWIFT_CLASS("_TtC7Mobtune11ProductInfo")
 @interface ProductInfo : EventParam
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// 결제한 상품 객체 생성자
+/// \param orderID 주문번호
+///
+/// \param items 상품정보
+///
+/// \param totalPrice 결제 금액(합계)
+///
+/// \param method 결제 방법
+///
 - (nonnull instancetype)initWithOrderID:(NSString * _Nonnull)orderID items:(NSArray<ProductItem *> * _Nonnull)items totalPrice:(NSString * _Nonnull)totalPrice method:(enum PaymentMethod)method OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
+/// 상품 정보를 담는 객체
 SWIFT_CLASS("_TtC7Mobtune11ProductItem")
 @interface ProductItem : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
+/// 본 상품
+SWIFT_CLASS("_TtC7Mobtune15ProductViewItem")
+@interface ProductViewItem : EventParam
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
 
 
+
+
+/// 사용자 계정 정보를 담는 객체
 SWIFT_CLASS("_TtC7Mobtune15UserAccountData")
 @interface UserAccountData : EventParam
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// 계정 정보 객체 생성자
+/// \param userID 유져 ID
+///
 - (nonnull instancetype)initWithUserID:(NSString * _Nonnull)userID OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
+
+/// 사용자 정보를 담는 객체, UserAccountData를 상속 받는다.
 SWIFT_CLASS("_TtC7Mobtune12UserInfoData")
 @interface UserInfoData : UserAccountData
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// 사용자 정보를 담는 객체 생성자
+/// \param userID 사용자 ID
+///
+/// \param userName 이름
+///
+/// \param nickName 별명
+///
+/// \param gender 성별.  남성인 경우 ‘M’, 여성인 경우 ‘F’, 그 외의 경우 ‘N’
+///
+/// \param birth 생년월일
+///
+/// \param phoneNo 휴대전화 번호
+///
+/// \param email 이메일
+///
+/// \param address 주소
+///
+/// \param marry 결혼여부. 결혼한 경우 ‘Y’, 그 외의 경우 ‘N’
+///
 - (nonnull instancetype)initWithUserID:(NSString * _Nonnull)userID userName:(NSString * _Nullable)userName nickName:(NSString * _Nullable)nickName gender:(NSString * _Nullable)gender birth:(NSString * _Nullable)birth phoneNo:(NSString * _Nullable)phoneNo email:(NSString * _Nonnull)email address:(NSString * _Nullable)address marry:(NSString * _Nullable)marry OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithUserID:(NSString * _Nonnull)userID SWIFT_UNAVAILABLE;
 @end

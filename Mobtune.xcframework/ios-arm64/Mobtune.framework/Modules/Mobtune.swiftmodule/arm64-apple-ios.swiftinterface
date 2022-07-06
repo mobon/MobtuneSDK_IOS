@@ -5,6 +5,7 @@ import AdSupport
 import AppTrackingTransparency
 import Foundation
 @_exported import Mobtune
+import OSLog
 import StoreKit
 import Swift
 import UIKit
@@ -23,24 +24,29 @@ import _Concurrency
   @objc override dynamic public init()
   @objc deinit
 }
-@objc public enum PaymentMethod : Swift.Int {
-  case CREDICTCARD = 1
-  case BANKTRANSFER = 2
-  case MOBILEPAYMENT = 3
-  case ETC = 4
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
+@_inheritsConvenienceInitializers @objc public class Mobtune : ObjectiveC.NSObject {
+  public static var version: Swift.String {
     get
   }
-}
-@_inheritsConvenienceInitializers @objc public class Mobtune : ObjectiveC.NSObject {
   @objc public static func configure(appKey: Swift.String)
   @objc public static func setDeepLink(linkUrl: Swift.String)
   @objc public static func getConfiguration() -> WebKit.WKWebViewConfiguration
   public static func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
   public static func addEvent(eventType: MobtuneEvent, param: EventParam)
   @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class ProductViewItem : EventParam {
+  public var productCode: Swift.String!
+  public var productName: Swift.String!
+  public var price: Swift.String?
+  public var productUrl: Swift.String?
+  public var imageUrl: Swift.String?
+  public var dcPrice: Swift.String?
+  public var soldOut: Swift.String?
+  public var referrer: Swift.String?
+  @objc override dynamic public init()
+  public init(productCode: Swift.String, name: Swift.String, price: Swift.String?, url: Swift.String?, imageUrl: Swift.String?, dcPrice: Swift.String?, isSoldOut: Swift.String?, referrer: Swift.String?)
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class OrderCancelData : EventParam {
@@ -59,6 +65,17 @@ import _Concurrency
   @objc public init(cartID: Swift.String?, products: [ProductItem])
   @objc deinit
 }
+@objc public enum PaymentMethod : Swift.Int {
+  case CREDICTCARD = 1
+  case BANKTRANSFER = 2
+  case MOBILEPAYMENT = 3
+  case ETC = 4
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 @objc public enum MobtuneEvent : Swift.Int {
   case ORDER
   case SIGNIN
@@ -67,6 +84,7 @@ import _Concurrency
   case SHOPPINGCART
   case ORDERCANCEL
   case ACCOUNTMODIFIED
+  case PRODUCTVIEWED
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {

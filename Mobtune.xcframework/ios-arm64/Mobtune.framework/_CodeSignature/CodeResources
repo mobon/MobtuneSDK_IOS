@@ -6,39 +6,39 @@
 	<dict>
 		<key>Headers/Mobtune-Swift.h</key>
 		<data>
-		wtQdtJCFj8QL6wleATdSkAh9meM=
+		I54jC1821tD9cGZbfM9Uf+Cg8Rw=
 		</data>
 		<key>Headers/Mobtune.h</key>
 		<data>
-		8nnxEDsshaF8rE3UWu5Yp0b6bVw=
+		krFVhgoivSvvLCbbA/NXXmrobUQ=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		usxFE68yZ61kG4ha9eAYXniec7o=
+		fzy+ngf9JT/JxcptYGe6t58bq+k=
 		</data>
 		<key>Modules/Mobtune.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		/W0I5mJ+HJTuC7QR0keNM9j1sak=
+		97neH5yscmt8qP2rOZevgl7bVEU=
 		</data>
 		<key>Modules/Mobtune.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		ef8QoEaUUN6FdmsVfL3gepbt//U=
+		8whr9y+dyIUO/Lr5UbC8mF0aIR8=
 		</data>
 		<key>Modules/Mobtune.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		p+BZuz2jnD6piL75PADEYOBJYTM=
+		zWxGapxVrijFyTAGDC/P4YtViOg=
 		</data>
 		<key>Modules/Mobtune.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		/W0I5mJ+HJTuC7QR0keNM9j1sak=
+		97neH5yscmt8qP2rOZevgl7bVEU=
 		</data>
 		<key>Modules/Mobtune.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		ef8QoEaUUN6FdmsVfL3gepbt//U=
+		8whr9y+dyIUO/Lr5UbC8mF0aIR8=
 		</data>
 		<key>Modules/Mobtune.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		p+BZuz2jnD6piL75PADEYOBJYTM=
+		zWxGapxVrijFyTAGDC/P4YtViOg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -51,56 +51,56 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4YPL1fZMIfRnXFGYidstryEY8Y+1Hix79h921bqHD7I=
+			RfU94UL7ZrVCOttoi+7hh8txE720FTVgOSuCWCIO3Ng=
 			</data>
 		</dict>
 		<key>Headers/Mobtune.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IOp5mQwzlZA5aOW8VHTZ22ljYxpJA3WPyELeP7hD7tU=
+			xV+HIBE4wWdn3QjQiMdx9FZSi7+fd5Cp1sam5At6NvE=
 			</data>
 		</dict>
 		<key>Modules/Mobtune.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			s/zDyfudVjEBlwQX3EcJzQgb8fjy89fzBAiL2c6nH3c=
+			hcQMUAuYh25DlYFdhyw/zODHnaNwkUGxRWYL6Lqp4d4=
 			</data>
 		</dict>
 		<key>Modules/Mobtune.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			we6QmP+SKg5uuykDA1t8nBKst1fbIn1r+p6GcfSevwg=
+			ONEvQP/xPxsO9QIRaYi0FZwQzmvg4rnTqbSoUwiRtJw=
 			</data>
 		</dict>
 		<key>Modules/Mobtune.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HkNyyAqs+d6q5T9dvh9MyGBTzFgTKAbk2M3rtikoXyY=
+			cTz/l/npkBH4a6dq3ueFVy8rfSr/pqcgqfZXpfJKGmU=
 			</data>
 		</dict>
 		<key>Modules/Mobtune.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			s/zDyfudVjEBlwQX3EcJzQgb8fjy89fzBAiL2c6nH3c=
+			hcQMUAuYh25DlYFdhyw/zODHnaNwkUGxRWYL6Lqp4d4=
 			</data>
 		</dict>
 		<key>Modules/Mobtune.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			we6QmP+SKg5uuykDA1t8nBKst1fbIn1r+p6GcfSevwg=
+			ONEvQP/xPxsO9QIRaYi0FZwQzmvg4rnTqbSoUwiRtJw=
 			</data>
 		</dict>
 		<key>Modules/Mobtune.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HkNyyAqs+d6q5T9dvh9MyGBTzFgTKAbk2M3rtikoXyY=
+			cTz/l/npkBH4a6dq3ueFVy8rfSr/pqcgqfZXpfJKGmU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
