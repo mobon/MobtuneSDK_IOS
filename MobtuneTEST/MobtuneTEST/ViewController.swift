@@ -19,6 +19,9 @@ class ViewController: UIViewController {
     private var nextBtn: UIButton!
     private var goCartBtn: UIButton!
     private var goOrderCancelBtn: UIButton!
+    private var viewedProductBtn: UIButton!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,6 +89,16 @@ class ViewController: UIViewController {
         goOrderCancelBtn.addTarget(self, action: #selector(goOrderCancelAction), for: .touchUpInside)
         contentSArea.addSubview(goOrderCancelBtn)
         
+        
+        viewedProductBtn = getDefaultBtn(title: "본 상품")
+        viewedProductBtn.frame = CGRect(x: 15,
+                                        y: goOrderCancelBtn.getPosition(space: 10).y,
+                                        width: view.frame.size.width - 30,
+                                        height: 30)
+        viewedProductBtn.addTarget(self, action: #selector(viewedProductAction), for: .touchUpInside)
+        contentSArea.addSubview(viewedProductBtn)
+        
+        
         if let lastView = contentSArea.subviews.last {
             contentSArea.contentSize = CGSize(width: view.frame.width, height: lastView.getPosition(space: 20).y)
         }
@@ -149,6 +162,11 @@ class ViewController: UIViewController {
 
     @objc private func orderAction() {
         let nextVC = OrderViewController()
+        navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
+    @objc private func viewedProductAction() {
+        let nextVC = ViewedProductViewController()
         navigationController?.pushViewController(nextVC, animated: true)
     }
 }

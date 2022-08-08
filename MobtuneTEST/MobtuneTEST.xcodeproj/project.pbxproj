@@ -15,8 +15,6 @@
 		52BF65A627703645002D7597 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52BF65A427703645002D7597 /* Main.storyboard */; };
 		52BF65A827703647002D7597 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52BF65A727703647002D7597 /* Assets.xcassets */; };
 		52BF65AB27703647002D7597 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52BF65A927703647002D7597 /* LaunchScreen.storyboard */; };
-		52BF65B4277036A8002D7597 /* Mobtune.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52BF65B3277036A8002D7597 /* Mobtune.xcframework */; };
-		52BF65B5277036A8002D7597 /* Mobtune.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52BF65B3277036A8002D7597 /* Mobtune.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		52BF65B827703753002D7597 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BF65B727703753002D7597 /* SecondViewController.swift */; };
 		52BF65C327706E6C002D7597 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BF65C227706E6C002D7597 /* UIView.swift */; };
 		52BF65C527707280002D7597 /* UserIdInputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BF65C427707280002D7597 /* UserIdInputVC.swift */; };
@@ -25,6 +23,9 @@
 		52BF65CF2770A0F5002D7597 /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BF65CE2770A0F5002D7597 /* CartVC.swift */; };
 		52BF65D12770A197002D7597 /* OrderCancelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BF65D02770A197002D7597 /* OrderCancelVC.swift */; };
 		52BF65D32770A365002D7597 /* ProductSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BF65D22770A365002D7597 /* ProductSubView.swift */; };
+		6626FC9F2887ECAD009D3FEB /* Mobtune.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6699C9F42887E0C600D3B0DF /* Mobtune.xcframework */; };
+		6626FCA02887ECAD009D3FEB /* Mobtune.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6699C9F42887E0C600D3B0DF /* Mobtune.xcframework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		66A862F9289B6DF500F6E5ED /* ViewedProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A862F8289B6DF500F6E5ED /* ViewedProductVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,7 +35,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				52BF65B5277036A8002D7597 /* Mobtune.xcframework in Embed Frameworks */,
+				6626FCA02887ECAD009D3FEB /* Mobtune.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,7 +53,6 @@
 		52BF65A727703647002D7597 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52BF65AA27703647002D7597 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52BF65AC27703647002D7597 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52BF65B3277036A8002D7597 /* Mobtune.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Mobtune.xcframework; path = ../Mobtune/mobtunesdk_ios/build/Mobtune.xcframework; sourceTree = "<group>"; };
 		52BF65B727703753002D7597 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		52BF65C227706E6C002D7597 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		52BF65C427707280002D7597 /* UserIdInputVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdInputVC.swift; sourceTree = "<group>"; };
@@ -61,6 +61,9 @@
 		52BF65CE2770A0F5002D7597 /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
 		52BF65D02770A197002D7597 /* OrderCancelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCancelVC.swift; sourceTree = "<group>"; };
 		52BF65D22770A365002D7597 /* ProductSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSubView.swift; sourceTree = "<group>"; };
+		664C3C4F2888F86400E406B8 /* OSLog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OSLog.framework; path = System/Library/Frameworks/OSLog.framework; sourceTree = SDKROOT; };
+		6699C9F42887E0C600D3B0DF /* Mobtune.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Mobtune.xcframework; path = ../Mobtune.xcframework; sourceTree = "<group>"; };
+		66A862F8289B6DF500F6E5ED /* ViewedProductVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewedProductVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52BF65B4277036A8002D7597 /* Mobtune.xcframework in Frameworks */,
+				6626FC9F2887ECAD009D3FEB /* Mobtune.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +123,7 @@
 				52BF65D02770A197002D7597 /* OrderCancelVC.swift */,
 				52BF65D22770A365002D7597 /* ProductSubView.swift */,
 				527406DB2771E82600FE17E1 /* OrderVC.swift */,
+				66A862F8289B6DF500F6E5ED /* ViewedProductVC.swift */,
 			);
 			path = MobtuneTEST;
 			sourceTree = "<group>";
@@ -127,7 +131,8 @@
 		52BF65B2277036A8002D7597 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				52BF65B3277036A8002D7597 /* Mobtune.xcframework */,
+				664C3C4F2888F86400E406B8 /* OSLog.framework */,
+				6699C9F42887E0C600D3B0DF /* Mobtune.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -208,6 +213,7 @@
 				52BF65D12770A197002D7597 /* OrderCancelVC.swift in Sources */,
 				52BF65B827703753002D7597 /* SecondViewController.swift in Sources */,
 				52BF65A327703645002D7597 /* ViewController.swift in Sources */,
+				66A862F9289B6DF500F6E5ED /* ViewedProductVC.swift in Sources */,
 				52BF65C527707280002D7597 /* UserIdInputVC.swift in Sources */,
 				52BF65C327706E6C002D7597 /* UIView.swift in Sources */,
 				52BF65CF2770A0F5002D7597 /* CartVC.swift in Sources */,
@@ -374,6 +380,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -403,6 +410,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

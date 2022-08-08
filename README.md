@@ -8,6 +8,7 @@ Mobtune SDK 를 이용하여 통해 고객 흐름 파악 및 이용자 분석, �
 |0.9.0|최초 라이브러리 버전|
 |0.9.13|Objective-C 프로젝트 대응|
 
+
 ## 개발환경
 - 최소 SDK Version : iOS13
 - Build Tool : XCODE 
@@ -68,8 +69,14 @@ view.addSubview(webView)
  - 이벤트 종류
  사용자, 결제관련 이벤트를 추적합니다.
 ```
-ORDER, SHOPPINGCART, ORDERCANCEL, 
-SGININ, SIGNUP, ACCOUNTDELETED, ACCOUNTMODIFIED
+ORDER, 
+SHOPPINGCART, 
+ORDERCANCEL, 
+SGININ,
+SIGNUP, 
+ACCOUNTDELETED,
+ACCOUNTMODIFIED,
+PRODUCTVIEWED
 ```
 
 ### 5.1 결제 이벤트
@@ -79,13 +86,13 @@ SGININ, SIGNUP, ACCOUNTDELETED, ACCOUNTMODIFIED
             핸드폰 결제 - MOBILEPAYMENT
             기타 - ETC
             
-* 결제 추적  
-   ```swift
+*결제 추적  
+```swift
 import Mobtune
 
 let orderInfo = ProductInfo()
 orderInfo.totalPrice = "결제금액"
-orderInfo.paymentMethod = .결재 방법
+orderInfo.paymentMethod = 결재 방법
 orderInfo.orderId = "결제 코드"
 orderInfo.productItems = []
 for _ in 0..<2 {
@@ -170,4 +177,24 @@ if type == .join{
     //회원 정보 수정
     Mobtune.addEvent(eventType: .ACCOUNTMODIFIED, param: info)
 }
+```
+
+
+*본 상품 이벤트
+- 상품 상세화면 진입등, 해당 상품을 고객이 확인했음을 알리는 이벤트
+
+```swift
+import Mobtune
+
+let product = ProductViewItem()
+product.productCode = "상품 코드"
+product.productName = "상품명"
+product.price = "가격"
+product.dcPrice = "할인된 가격"
+product.productUrl = "상품 상세 URL"
+product.imageUrl = "상품 대표 이미지 URL"
+product.soldOut = "품절 여부, Y/N"
+product.referrer = "기타 추적을 위한 referrer값"
+
+Mobtune.addEvent(eventType: .PRODUCTVIEWED, param: product)
 ```
